@@ -493,7 +493,7 @@ static int lmqtt_connect(lua_State* L) {
     conn_opts.password = strdup(password); // //needs to be strdup'd here for connectionLost usage
     conn_opts.onSuccess = connSuccess;
     conn_opts.onFailure = connFailure;
-    conn_opts.automaticReconnect = 1;
+    conn_opts.automaticReconnect = 0;
     conn_opts.maxRetryInterval = 10;
 
     conn_opts.context = &ctx;
